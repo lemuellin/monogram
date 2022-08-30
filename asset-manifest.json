@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/monogram/static/css/main.84487ea8.css",
+    "main.js": "/monogram/static/js/main.3eca53a8.js",
+    "static/media/camera.jpg": "/monogram/static/media/camera.7df3dbbca6fea0715273.jpg",
+    "index.html": "/monogram/index.html",
+    "main.84487ea8.css.map": "/monogram/static/css/main.84487ea8.css.map",
+    "main.3eca53a8.js.map": "/monogram/static/js/main.3eca53a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84487ea8.css",
+    "static/js/main.3eca53a8.js"
+  ]
+}
