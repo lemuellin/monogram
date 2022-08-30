@@ -1,12 +1,4 @@
-TODO:
-1. Profile Page:
-
-	try to set the image as background image
-
-	show their own posts
-	customize profile name/ photo/ password/ description
-	update automatically when user upload post from profile page
-
+Styling:
 ** SVG icons need to center by adjusting viewbox, switch to PNG icons **
 
 

@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 
 const RouteSwitch = () => {
     return(
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route
                     path=""
@@ -13,7 +13,7 @@ const RouteSwitch = () => {
                 <Route path='/login' element={<LoginPage/>}/>
                 <Route path='/home' element={<HomePage/>}/>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 
