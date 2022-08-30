@@ -17,7 +17,7 @@ const Login = () => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            nav('/home');
+            nav('/');
         })
         .catch((error) => {
             alert(error.code);

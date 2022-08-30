@@ -19,7 +19,7 @@ const LoginPage = () => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
               const uid = user.uid;
-              nav('/home');
+              nav('/');
             } else {
               // User is signed out
             }

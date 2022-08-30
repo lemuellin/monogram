@@ -20,7 +20,7 @@ const Signup = () => {
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => 
             // console.log(userCredential.user),
-            nav('/home')
+            nav('/')
         )
         .catch((error) => {
             // console.log(error.code);
