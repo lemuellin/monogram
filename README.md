@@ -1,8 +1,8 @@
-Styling:
-** SVG icons need to center by adjusting viewbox, switch to PNG icons **
+# Monogram - An Instagram Clone
 
+# future dev
+	- Profile Page: hover photo to show like/comment count
 
-# Instaclone
 # TECH:
 1. Tailwind / materialUI / Bootstrap
 2. Prop-type

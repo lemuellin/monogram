@@ -135,3 +135,20 @@
         width:250px;
     }
 }
+
+#containerProfile{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#banner{
+    width:100%;
+}
+
+#bannerText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

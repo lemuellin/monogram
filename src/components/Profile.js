@@ -6,8 +6,8 @@ import { onAuthStateChanged } from 'firebase/auth';
 import uniqid from "uniqid";
 
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
+import banner from '../assets/banner.jpg';
 
 const Profile = (props) => {
     const [ currUser, setCurrUser ] = useState('');
@@ -32,7 +32,11 @@ const Profile = (props) => {
         remainderNum = postList.length%3;
     });
 
-    // console.log(postList[0].imgUrl);
+    const Hover = (src) => {
+        let likeCount = "like:" + src.likeCount;
+        let commentCount = "comment:" + src.comments.length;
+        console.log(likeCount, commentCount);
+    };
 
     for(let i = 1; i <= rowNum; i++){
         fullRows.push(
@@ -71,7 +75,7 @@ const Profile = (props) => {
         for (let i = 2; i >= 1; i--){
             remainderRows.push(
                 <div key={uniqid()} className="d-flex justify-content-center col-sm">
-                    <img id="profileItem" src={postList[postList.length - i].imgURL} style={{objectFit: "contain", objectPosition: "center"}}/>
+                    <img id="profileItem" src={postList[postList.length - i].imgURL} style={{objectFit: "contain", objectPosition: "center"}} onMouseEnter={()=>{Hover(postList[postList.length - i])}}/>
                 </div>
             );
         }
@@ -84,7 +88,10 @@ const Profile = (props) => {
 
     return(
         <div>
-            <h1 className="text-center">@{currUser}</h1>
+            <div id="containerProfile">
+                <img src={banner} alt="banner" id="banner"/>
+                <h1 className="text-center" id="bannerText">@{currUser}</h1>
+            </div>
             <Container className="border">
                 {fullRows}
                 <div className='row'>
