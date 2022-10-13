@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import '../style/style.css';
+
 import { db, storage } from '../firebase-config';
 import { addDoc, collection, serverTimestamp, updateDoc, doc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
@@ -78,7 +80,7 @@ const UploadModal = (props) => {
     }
 
     return(
-        <Modal show={props.show} onHide={props.handleClose} centered>
+        <Modal show={props.show} onHide={props.handleClose} centered id="uploadModal">
             <Modal.Header className='d-flex flex-column'>
                 
                 {selectedFile ? (

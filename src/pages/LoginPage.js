@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import '../style/style.css';
 
 import Signup from '../components/Signup';
 import Login from '../components/Login';
@@ -30,8 +31,8 @@ const LoginPage = () => {
         <div className="d-flex flex-column align-items-center justify-content-center" style={{width: "100vw", height: "100vh"}}>
             <h1>MONOGRAM</h1>
             <div className="d-flex align-items-center justify-content-center gap-3">
-                <img src={camera} style={{height: "30vw"}} alt="retro camera"/>
-                <div style={{width: "35vw"}}>
+                <img src={camera} style={{height: "30vw"}} alt="retro camera" id="camera"/>
+                <div style={{width: "35vw"}} id="login">
                     <Tabs
                     defaultActiveKey="login"
                     id="uncontrolled-tab-example"

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../style/style.css';
+
 import { auth } from '../firebase-config';
 import { onAuthStateChanged } from 'firebase/auth';
 import uniqid from "uniqid";
@@ -34,60 +36,60 @@ const Profile = (props) => {
 
     for(let i = 1; i <= rowNum; i++){
         fullRows.push(
-            <Row key={uniqid()}>
-                <Col className="d-flex justify-content-center">
-                    <img src={postList[3*i-3].imgURL} style={{width: "20vw", height: "20vw", objectFit: "contain", objectPosition: "center"}}/>
-                </Col>
-                <Col className="d-flex justify-content-center">
-                    <img src={postList[3*i-2].imgURL} style={{width: "20vw", height: "20vw", objectFit: "contain", objectPosition: "center"}}/>
-                </Col>
-                <Col className="d-flex justify-content-center">
-                    <img src={postList[3*i-1].imgURL} style={{width: "20vw", height: "20vw", objectFit: "contain", objectPosition: "center"}}/>
-                </Col>
-            </Row>
+            <div className='row' key={uniqid()}>
+                <div className="d-flex justify-content-center col-sm">
+                    <img src={postList[3*i-3].imgURL} id="profileItem" style={{objectFit: "contain", objectPosition: "center"}}/>
+                </div>
+                <div className="d-flex justify-content-center col-sm">
+                    <img src={postList[3*i-2].imgURL} id="profileItem" style={{objectFit: "contain", objectPosition: "center"}}/>
+                </div>
+                <div className="d-flex justify-content-center col-sm">
+                    <img src={postList[3*i-1].imgURL} id="profileItem" style={{objectFit: "contain", objectPosition: "center"}}/>
+                </div>
+            </div>
         );
     }
 
     if(remainderNum == 1){
         remainderRows.push(
-            <Col key={uniqid()} className="d-flex justify-content-center">
-                <img src={postList[postList.length - 1].imgURL} style={{width: "20vw", height: "20vw", objectFit: "contain", objectPosition: "center"}}/>
-            </Col>
+            <div key={uniqid()} className="d-flex justify-content-center col-sm">
+                <img src={postList[postList.length - 1].imgURL} id="profileItem" style={{objectFit: "contain", objectPosition: "center"}}/>
+            </div>
         );
         remainderRows.push(
-            <Col key={uniqid()} className="d-flex justify-content-center">
-                <div style={{width: "20vw", height: "20vw", objectFit: "contain", objectPosition: "center"}}></div>
-            </Col>
+            <div key={uniqid()} className="d-flex justify-content-center col-sm">
+                <div id="profileItem" style={{objectFit: "contain", objectPosition: "center"}}></div>
+            </div>
         );
         remainderRows.push(
-            <Col key={uniqid()} className="d-flex justify-content-center">
-                <div style={{width: "20vw", height: "20vw", objectFit: "contain", objectPosition: "center"}}></div>
-            </Col>
+            <div key={uniqid()} className="d-flex justify-content-center col-sm">
+                <div id="profileItem" style={{objectFit: "contain", objectPosition: "center"}}></div>
+            </div>
         );
 
     }else if(remainderNum == 2){
         for (let i = 2; i >= 1; i--){
             remainderRows.push(
-                <Col key={uniqid()} className="d-flex justify-content-center">
-                    <img src={postList[postList.length - i].imgURL} style={{width: "20vw", height: "20vw", objectFit: "contain", objectPosition: "center"}}/>
-                </Col>
+                <div key={uniqid()} className="d-flex justify-content-center col-sm">
+                    <img id="profileItem" src={postList[postList.length - i].imgURL} style={{objectFit: "contain", objectPosition: "center"}}/>
+                </div>
             );
         }
         remainderRows.push(
-            <Col key={uniqid()} className="d-flex justify-content-center">
-                <div style={{width: "20vw", height: "20vw", objectFit: "contain", objectPosition: "center"}}></div>
-            </Col>
+            <div key={uniqid()} className="d-flex justify-content-center col-sm">
+                <div id="profileItem" style={{objectFit: "contain", objectPosition: "center"}}></div>
+            </div>
         );
     }
 
     return(
         <div>
             <h1 className="text-center">@{currUser}</h1>
-            <Container className="border w-75">
+            <Container className="border">
                 {fullRows}
-                <Row>
+                <div className='row'>
                     {remainderRows}
-                </Row>
+                </div>
             </Container>
         </div>
     )
