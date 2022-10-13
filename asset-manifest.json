@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/monogram/static/css/main.b2be807c.css",
-    "main.js": "/monogram/static/js/main.d1634f9f.js",
+    "main.css": "/monogram/static/css/main.c4f2ee0a.css",
+    "main.js": "/monogram/static/js/main.3faec6c4.js",
     "static/media/camera.jpg": "/monogram/static/media/camera.7df3dbbca6fea0715273.jpg",
+    "static/media/banner.jpg": "/monogram/static/media/banner.5d7db5ffac4d0465b1d6.jpg",
     "static/media/deleteBtn.png": "/monogram/static/media/deleteBtn.3c662b752278fc52f408.png",
     "static/media/send.png": "/monogram/static/media/send.cce7f972efaf9447fcdf.png",
     "static/media/trash-can.png": "/monogram/static/media/trash-can.69b204614d480e00b2f3.png",
     "static/media/likeBtn.png": "/monogram/static/media/likeBtn.556c78a5a9b89d6b2eeb.png",
     "index.html": "/monogram/index.html",
-    "main.b2be807c.css.map": "/monogram/static/css/main.b2be807c.css.map",
-    "main.d1634f9f.js.map": "/monogram/static/js/main.d1634f9f.js.map"
+    "main.c4f2ee0a.css.map": "/monogram/static/css/main.c4f2ee0a.css.map",
+    "main.3faec6c4.js.map": "/monogram/static/js/main.3faec6c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2be807c.css",
-    "static/js/main.d1634f9f.js"
+    "static/css/main.c4f2ee0a.css",
+    "static/js/main.3faec6c4.js"
   ]
 }
