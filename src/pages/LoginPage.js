@@ -31,8 +31,8 @@ const LoginPage = () => {
         <div className="d-flex flex-column align-items-center justify-content-center" style={{width: "100vw", height: "100vh"}}>
             <h1>MONOGRAM</h1>
             <div className="d-flex align-items-center justify-content-center gap-3">
-                <img src={camera} style={{height: "30vw"}} alt="retro camera" id="camera"/>
-                <div style={{width: "35vw"}} id="login">
+                <img src={camera} alt="retro camera" id="camera"/>
+                <div id="login">
                     <Tabs
                     defaultActiveKey="login"
                     id="uncontrolled-tab-example"

@@ -9,8 +9,12 @@
 
 
 /* Login Page */
+#camera{
+    width:400px;
+}
+
 #login{
-    min-width:400px;
+    width:400px;
 }
 
 @media(max-width:900px){
@@ -19,11 +23,11 @@
     }    
 }
 
-@media(max-width:420px){
+/* @media(max-width:420px){
     #login{
-        min-width:320px;
+        width:320px;
     }   
-}
+} */
 
 /* NavBar */
 #navIcon{
@@ -76,26 +80,26 @@
 }
 
 /* Home Page */
-.card{
+#card{
     max-width:800px;
     min-width:320px;
     width:50vw;
 }
 
 @media(max-width:1000px){
-    .card{
+    #card{
         width: 500px;
     }
 }
 
 @media(max-width:525px){
-    .card{
+    #card{
         width: 90vw;
     }
 }
 
 @media(max-width:400px){
-    .card{
+    #card{
         width: auto;
         min-width:320px;
     }
