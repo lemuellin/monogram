@@ -2,7 +2,7 @@
 An Instagram clone for monochrome photography.  
 [Live Demo](https://lemuellin.github.io/monogram/) :point_left:
 
-<img src="./src/assets/monogram.gif">
+<img src="./src/assets/monogramCompressed.gif">
 
 # Features
 -	Post photos with descriptions
