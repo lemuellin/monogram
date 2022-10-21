@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from "../components/NavBar";
 import Post from "../components/Post";
 import Profile from '../components/Profile';
+import WeatherWidget from '../components/WeatherWidget';
 
 import { db } from "../firebase-config";
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
@@ -77,6 +78,7 @@ const HomePage = () => {
     return(
         <div>
             <NavBar clickProfile={() => setProfileClicked(true)} clickHome={() => setProfileClicked(false)}/>
+            <WeatherWidget/>
             { profileClicked ? 
               <Profile data={posts}/> : 
               <div id="timeline" className="d-flex flex-column align-items-center justify-content-center mt-4 gap-4">
