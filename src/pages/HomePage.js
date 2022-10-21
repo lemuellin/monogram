@@ -78,11 +78,14 @@ const HomePage = () => {
     return(
         <div>
             <NavBar clickProfile={() => setProfileClicked(true)} clickHome={() => setProfileClicked(false)}/>
-            <WeatherWidget/>
+            
             { profileClicked ? 
               <Profile data={posts}/> : 
-              <div id="timeline" className="d-flex flex-column align-items-center justify-content-center mt-4 gap-4">
-                {posts.map((post)=>Post(post))}
+              <div>
+                <WeatherWidget/>
+                <div id="timeline" className="d-flex flex-column align-items-center justify-content-center mt-4 gap-4">
+                  {posts.map((post)=>Post(post))}
+                </div>
               </div>  
             }
         </div>
