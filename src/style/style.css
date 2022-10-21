@@ -157,10 +157,6 @@
 }
 
 /* Weather Widget */
-#weatherIcon{
-    
-}
-
 #weatherTemp{
     width:100px;
     font-size: 4rem;
@@ -180,13 +176,13 @@
 }
 
 #sunrise{
-    
+    text-align: center;
     padding: 10px;
     background-color: orange;
 }
 
 #sunset{
-    
-    padding: 10px;
+    text-align: center;
+    padding: 8px;
     background-color: rgb(255, 140, 0);
 }
