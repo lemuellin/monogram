@@ -8,11 +8,11 @@ const WeatherWidget = () => {
         getData();
     },[]);
 
-    const [locationEnabled, setLocationEnabled] = useState(false);
+    const [locationEnabled, setLocationEnabled] = useState(true);
     const [dataFetched, setDataFetched] = useState(false);
 
     async function getData(){
-        setLocationEnabled(true);
+        
         try{
             if (!navigator.geolocation) {
                 alert(`Your browser doesn't support Geolocation`);
@@ -23,7 +23,6 @@ const WeatherWidget = () => {
             }
 
             navigator.geolocation.getCurrentPosition(async (position) => {
-                console.log("SUC:",navigator.geolocation);
                 const latitude = Math.round(position.coords.latitude * 10000) / 10000;
                 const longitude = Math.round(position.coords.longitude * 10000) / 10000;
                 const OpenWeatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&APPID=08ebf9b0e8398ffe661ac4bcae054cda";
