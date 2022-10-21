@@ -7,6 +7,8 @@ const WeatherWidget = () => {
         getData();
     },[]);
 
+    const [locationEnabled, setLocationEnabled] = useState(false);
+
     async function getData(){
         try{
             if (!navigator.geolocation) {
@@ -19,7 +21,7 @@ const WeatherWidget = () => {
                 const OpenWeatherResponse = await fetch(OpenWeatherURL, {mode: 'cors'});
                 const allData = await OpenWeatherResponse.json();
                 sortData(allData);
-                
+                setLocationEnabled(true);
             });         
         }catch(error){
             console.log(error);
@@ -51,21 +53,26 @@ const WeatherWidget = () => {
     }
 
     return(
-        <div className="d-flex align-items-center justify-content-center mt-4 gap-4">
-            <div className="d-flex flex-column align-items-center justify-content-center">
-                <div id="weatherLocation">{info.location}</div>
-                <div className='d-flex align-items-center justify-content-center'>
-                    <img src={"https://openweathermap.org/img/wn/" + `${info.icon}` + '@2x.png'} alt="weather condition" id="weatherIcon"/>
-                    <div id="weatherTemp">{info.tempF}</div>
-                </div>
-                
-                <div id="weatherDescription">{info.description}</div>
-            </div>
-            <div>
-                <div id="sunrise">Sunrise: {info.sunrise}</div>
-                <div id="sunset">Sunset: {info.sunset}</div>
-                <div>Catch the Golden Hour!</div>
-            </div>
+        <div>
+            { locationEnabled ? 
+                <div className="d-flex align-items-center justify-content-center mt-4 gap-4">
+                    <div className="d-flex flex-column align-items-center justify-content-center">
+                        <div id="weatherLocation">{info.location}</div>
+                        <div className='d-flex align-items-center justify-content-center'>
+                            <img src={"https://openweathermap.org/img/wn/" + `${info.icon}` + '@2x.png'} alt="weather condition" id="weatherIcon"/>
+                            <div id="weatherTemp">{info.tempF}</div>
+                        </div>
+                        
+                        <div id="weatherDescription">{info.description}</div>
+                    </div>
+                    <div>
+                        <div id="sunrise">Sunrise: {info.sunrise}</div>
+                        <div id="sunset">Sunset: {info.sunset}</div>
+                        <div>Catch the Golden Hour!</div>
+                    </div>
+                </div> :
+                <div className='text-center mt-4'>Enable Location Service for Weather Widget!</div>
+            }
         </div>
     )
 }
